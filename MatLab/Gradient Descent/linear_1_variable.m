@@ -39,7 +39,7 @@ yPred = sum(X_norm.*theta,2); %use sum(data, 2) to sum rows (instead of columns)
 thetaNorm = pinv(X'*X)*X'*y;
 yPredNorm = sum(X.*thetaNorm',2);
 
-%plot data (only for 2D case (n=1)
+%plot data (only for 2D case (n=1))
 subplot(1,2,1)
 scatter(data.data(:,1),data.data(:,2),'.b')
 xlabel('X')
