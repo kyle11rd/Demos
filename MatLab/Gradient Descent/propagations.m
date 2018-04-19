@@ -83,5 +83,12 @@ Theta1_grad = 1/m*Delta1 + lambda/m*Theta1_zeroBias; %25x401 (same as Theta1)
 %     perturb(i) = 0; %release this purterbation
 % end
 
-
+%% Learning Curve example flow:
+%for i=1:m
+%    xt = X(1:i, :);
+%    yt = y(1:i, :);
+%    then train a theta_i with xt and yt (instead of X and y)
+%    error_train(i) = J(xt, yt, theta_i)
+%    error_crossValidation(i) = J(X_cv, y_cv, theta_i)
+%end
 
