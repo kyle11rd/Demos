@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gonum.org/v1/gonum/mat"
+	"gonum.org/v1/gonum/mat" //has to follow this directory
 	"gonum.org/v1/gonum/stat"
 
 	"bufio"
