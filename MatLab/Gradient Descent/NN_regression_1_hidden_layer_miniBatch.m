@@ -94,6 +94,7 @@ for i=1:num_iters
     Theta2_grad = 1/miniBatchSize*Delta2 + lambda/miniBatchSize*Theta2_zeroBias; %apply regularization
     Theta1_grad = 1/miniBatchSize*Delta1 + lambda/miniBatchSize*Theta1_zeroBias;
     
+    alpha = alpha * alphaReductionRate;
     Theta1 = Theta1 - alpha*Theta1_grad; %apply updates
     Theta2 = Theta2 - alpha*Theta2_grad;
 end
