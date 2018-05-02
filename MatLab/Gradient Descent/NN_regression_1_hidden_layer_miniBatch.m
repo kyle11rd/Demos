@@ -49,20 +49,14 @@ for i=1:num_iters
     batchIndx = 1;
     xBatch = zeros(miniBatchSize, n);
     yBatch = zeros(miniBatchSize,1);
-    while batchIndx <= miniBatchSize && inputIndx <= m
-        xBatch(batchIndx,:) = XNorm(inputIndx,:);
-        yBatch(batchIndx) = yNorm(inputIndx);
-        batchIndx = batchIndx + 1;
-        inputIndx = inputIndx + 1;
-    end
-    if batchIndx <= miniBatchSize
-        inputIndx = 1;
-    end
     while batchIndx <= miniBatchSize
         xBatch(batchIndx,:) = XNorm(inputIndx,:);
         yBatch(batchIndx) = yNorm(inputIndx);
         batchIndx = batchIndx + 1;
         inputIndx = inputIndx + 1;
+        if inputIndx == m
+            inputIndx = 1;
+        end
     end
     
     %% forward propagation
